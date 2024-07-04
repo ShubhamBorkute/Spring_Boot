@@ -1,0 +1,13 @@
+package com.nt.services;
+import java.util.ArrayList;
+import com.nt.entity.NoteEntity;
+
+public class NoteService {
+	
+	class TaskHolder{
+		private int noteId;
+		private ArrayList<NoteEntity> notes=new ArrayList<>();
+	}
+	
+
+}

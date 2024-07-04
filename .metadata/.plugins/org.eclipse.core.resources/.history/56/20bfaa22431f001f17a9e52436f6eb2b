@@ -1,0 +1,17 @@
+server.port=3232
+
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sbms
+    username: root
+    password: shubham
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+      
+    show-sql: true  
+
+

@@ -1,0 +1,16 @@
+package com.nt.services;
+import java.util.ArrayList;
+
+import org.springframework.stereotype.Service;
+
+import com.nt.entity.NoteEntity;
+@Service
+public class NoteService {
+	
+	class TaskHolder{
+		protected int noteId;
+		protected ArrayList<NoteEntity> notes=new ArrayList<>();
+	}
+	
+
+}

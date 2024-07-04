@@ -1,0 +1,32 @@
+package com.nt.entity;
+
+import java.util.Date;
+
+
+
+
+import lombok.Data;
+import lombok.Setter;
+@Data
+
+@Setter
+public class TaskEntity {
+
+	
+	private int id;
+	private String title;
+	private String description;
+	//private LocalDateTime deadline;
+	private Date deadline;
+	private boolean status;
+	
+	@Override
+	public String toString() {
+		return "TaskEntity [id=" + id + ", title=" + title + ", description=" + description + ", deadline=" + deadline
+				+ ", status=" + status + "]";
+	}
+	
+	
+	
+	
+}

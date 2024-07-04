@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;09-SpringData-JPA-03&apos; to &apos;09-SpringData-JPA-03(Custom_Method)&apos;&#x0D;&#x0A;- Original element: &apos;09-SpringData-JPA-03&apos;&#x0D;&#x0A;- Renamed element: &apos;09-SpringData-JPA-03&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;09-SpringData-JPA-03&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=09-SpringData-JPA-03" name="09-SpringData-JPA-03(Custom_Method)" references="true" stamp="1718348561461" version="1.0"/>
+</session>

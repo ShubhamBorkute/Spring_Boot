@@ -1,0 +1,5 @@
+package com.nt.services;
+
+public class NoteService {
+
+}

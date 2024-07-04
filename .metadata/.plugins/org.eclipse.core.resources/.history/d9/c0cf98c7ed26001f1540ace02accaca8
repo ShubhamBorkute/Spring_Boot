@@ -1,0 +1,26 @@
+package temp;
+
+public class SlidingWindowDemo {
+	public static int findMaxSum(int arr[],int k) {
+		int n=arr.length;
+		if(n<k) {System.out.println("Invalid input");return 0;}
+		
+		int max=0;
+		for(int i=0;i<k;i++) {
+			max+=arr[i];
+		}
+		int winmax=max;
+		
+		for(int i=k;i<n;i++) {
+			winmax+=arr[i]-arr[i-k];	
+			max=Math.max(max, winmax);
+		}
+		return winmax;
+	}
+public static void main(String[] args) {
+	int arr[]={12,3,4,5,6,7,8,55,6,7,4,2,2};
+	int k=3;
+System.out.println(findMaxSum(arr,k));
+	
+}
+}

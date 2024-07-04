@@ -1,0 +1,32 @@
+package com.nt;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.nt.entity.Product;
+import com.nt.repo.ProductRepository;
+
+@SpringBootApplication
+public class Application {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext cxt = SpringApplication.run(Application.class, args);
+		
+		
+		ProductRepository prdrepo = cxt.getBean(ProductRepository.class);
+		
+		System.out.println(prdrepo.getClass().getName());
+		
+		
+		Product p=new Product();
+		p.setpId(103);
+		p.setpName("PenDrive");
+		p.setpPrice(1355.80);
+		
+		
+		prdrepo.save(p);
+		
+	}
+
+}

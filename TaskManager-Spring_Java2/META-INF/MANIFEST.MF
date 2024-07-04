@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: TaskManager-Spring_Java2
+Bundle-SymbolicName: TaskManager-Spring_Java2
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: TaskManager-Spring_Java2.jar,
+ ShubhamBorkute/Downloads/Crome_Download/lombok-1.18.32.jar
+Automatic-Module-Name: TaskManager.Spring.Java2
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: com.nt,
+ com.nt.controllers,
+ com.nt.dto,
+ com.nt.entity,
+ com.nt.services

@@ -1,0 +1,14 @@
+package com.nt;
+
+
+
+
+@SpringBootApplication
+@ComponentScan(basePackages = "com.nt.*")
+public class TaskManagerSpringJavaApplication {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = SpringApplication.run(TaskManagerSpringJavaApplication.class, args);
+	}
+
+}

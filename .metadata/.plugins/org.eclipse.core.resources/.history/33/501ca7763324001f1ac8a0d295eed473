@@ -1,0 +1,31 @@
+package com.nt.services;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.nt.entity.NoteEntity;
+import com.nt.entity.TaskEntity;
+@Service
+public class NoteService {
+	private TaskService taskService;
+	
+	
+	public NoteService(TaskService taskService) {
+
+		this.taskService = taskService;
+	}
+
+
+	class TaskHolder{
+		protected int noteId;
+		protected ArrayList<NoteEntity> notes=new ArrayList<>();
+	}
+	
+public List<NoteEntity>getNoteForTask(int taskId){
+	TaskEntity task=taskService.gettaskById(taskId);
+	if(task==null)return null;
+	if(task.g)
+	
+}
+}

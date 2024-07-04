@@ -1,0 +1,1 @@
+module moduleinfo {exports com.nt.controllers;exports com.nt.repository;exports com.nt.dto;exports com.nt;exports com.nt.services;exports com.nt.entity;requires jakarta.persistence;requires lombok;requires spring.beans;requires spring.boot;requires spring.boot.autoconfigure;requires spring.context;requires spring.core;requires spring.data.commons;requires spring.web;}
