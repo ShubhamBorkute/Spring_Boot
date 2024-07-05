@@ -1,14 +1,18 @@
 package com.nt.controllers;
 
 
+import java.text.ParseException;
 import java.util.List;
 
-import org.springframework.expression.ParseException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.nt.dto.CreateTaskDTO;
 import com.nt.dto.ErrorResponceDTO;
@@ -50,7 +54,7 @@ public ResponseEntity<TaskEntity> getTasksById(@PathVariable("id")Integer id) {
 }
 
 @PostMapping("")
-public ResponseEntity<TaskEntity> addTask(@RequestBody CreateTaskDTO body) throws ParseException { 
+public ResponseEntity<TaskEntity> addTask(@RequestBody CreateTaskDTO body) throws ParseException, java.text.ParseException { 
 	var task = taskService.addTask(body.getTitle(), body.getDescription(), body.getDeadline());
 return ResponseEntity.ok(task);
 }

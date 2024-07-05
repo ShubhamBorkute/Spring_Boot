@@ -2,7 +2,8 @@
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Optional;
 
@@ -18,7 +19,7 @@ public class TaskService{
 	@Autowired
 	private TaskRepo taskRepo;
 
-private ArrayList<TaskEntity> tasks=new ArrayList<>();
+private HashSet<TaskEntity> tasks=new HashSet<>();
 //private int taskId=1;
 private final SimpleDateFormat deadlineformat=new SimpleDateFormat("yyyy-MM-dd");
 
@@ -39,7 +40,7 @@ public TaskEntity addTask(String title,String description,String deadline) throw
 	//taskId++;
 	return task;
 }
-public ArrayList<TaskEntity> getTask(){
+public HashSet<TaskEntity> getTask(){
 	Iterable<TaskEntity> all = taskRepo.findAll();
 Iterator<TaskEntity> iterator = all.iterator();
 while(iterator.hasNext()) {

@@ -1,11 +1,10 @@
 package com.nt.controllers;
 import java.text.ParseException;
-import java.util.List;
+import java.util.HashSet;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.nt.dto.CreateTaskDTO;
 import com.nt.dto.ErrorResponceDTO;
-import com.nt.dto.UpdateTaskDTO;
 import com.nt.entity.TaskEntity;
 import com.nt.services.TaskService;
 
@@ -34,7 +32,7 @@ public TaskController(TaskService taskService) {
 
 
 @GetMapping("")
-public ResponseEntity<List<TaskEntity>> getTasks() {
+public ResponseEntity<HashSet<TaskEntity>> getTasks() {
 	
 	var tasks=taskService.getTask();
 	return ResponseEntity.ok(tasks);
