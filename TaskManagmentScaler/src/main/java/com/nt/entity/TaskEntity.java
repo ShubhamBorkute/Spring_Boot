@@ -1,6 +1,7 @@
 package com.nt.entity;
 
 import java.util.Date;
+import java.util.List;
 
 import lombok.Data;
 @Data
@@ -12,6 +13,7 @@ public class TaskEntity {
 	// private LocalDateTime deadline;
 	private Date deadline;
 	private boolean status;
+	//private List<NoteEntity> notes;
 	/*
 	 * public int getId() { return id; } public void setId(int id) { this.id = id; }
 	 * public String getTitle() { return title; } public void setTitle(String title)

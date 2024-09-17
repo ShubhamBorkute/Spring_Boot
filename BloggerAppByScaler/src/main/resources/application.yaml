@@ -1,0 +1,11 @@
+spring:
+  application:
+      name:   BloggerAppByScaler
+
+---
+server:
+  port: 8855
+spring:
+  datasource:
+    driver-class-name:  com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sbms

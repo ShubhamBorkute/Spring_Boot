@@ -16,7 +16,9 @@ public class Application {
 		
 		//empser.getAllEmpRecords();
 		
-		empser.getEmpById(7902);
+		//empser.getEmpById(7902);
+		
+		//empser.insertEmployeeNo();
 	}
 
 }

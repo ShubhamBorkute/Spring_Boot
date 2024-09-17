@@ -17,12 +17,14 @@ public class Application {
 		
 		ProductService prdser = cxt.getBean(ProductService.class);
 		
-		System.out.println(prdser.getClass().getName());
+		//System.out.println(prdser.getClass().getName());
 		//prdser.storeProduct();
 		//prdser.storeMultipleProduct();
 		//prdser.getProductById();
 		// prdser.getCount(); 
 		//prdser.getMultipleProduct();
+		
+		prdser.getMultipleProduct();
 		
 		
 		

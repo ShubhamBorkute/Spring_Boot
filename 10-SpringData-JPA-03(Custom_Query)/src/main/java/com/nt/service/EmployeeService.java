@@ -12,13 +12,16 @@ public class EmployeeService {
 @Autowired
 	private jpaRepo jparepo;
 
-	public void getAllEmpRecords() {
-		List<Employee> list = jparepo.getAllEmpRecords();
-		list.forEach(System.out::println);	
-	}
-	
-	public void getEmpById(Integer id) {
-		Employee id2 = jparepo.getEmpById(id);
-		System.out.println(id2);
-	}
+	/*
+	 * public void getAllEmpRecords() { //List<Employee> list =
+	 * jparepo.getAllEmpRecords(); list.forEach(System.out::println); }
+	 * 
+	 * public void getEmpById(Integer id) { // Employee id2 =
+	 * jparepo.getEmpById(id); System.out.println(id2); }
+	 */
+
+public void insertEmployeeNo(){
+	jparepo.insertEmployeeNo();
+	System.out.println("Done");
+}
 }
