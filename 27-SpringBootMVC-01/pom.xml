@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.nt</groupId>
-	<artifactId>13-SpringMVC_02</artifactId>
+	<artifactId>27-SpringBootMVC-01</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>13-SpringMVC_02</name>
+	<name>27-SpringBootMVC-01</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
