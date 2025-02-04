@@ -1,0 +1,166 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cold Email Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 70vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      text-align: center;
+      max-width: 400px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #333;
+    }
+    #emailForm input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #d61b1b;
+      border-radius: 4px;
+    }
+    .type, .btn {
+      width: 100%;
+      font-size: 16px;
+      padding: 12px;
+      margin: 8px 0;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .type {
+      background-color: #385151;
+    }
+    .type:hover, .btn:hover {
+      background-color: #19be7a;
+    }
+    .btn {
+      background-color: #2196F3;
+    }
+    .dropdown {
+      position: relative;
+      width: 100%;
+      margin-top: 8px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      width: 100%;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      z-index: 1;
+    }
+    .dropdown-content input[type="button"] {
+      width: 100%;
+      padding: 10px 16px;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .dropdown-content input[type="button"]:hover {
+      background-color: #ddd;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .message-box {
+      background-color: #e6f7ff;
+      border-left: 5px solid #2196F3;
+      padding: 10px 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+  
+  <div th:if="${msg}" class="message-box">
+    <h2 th:text="${msg}"></h2>
+  </div>
+  
+    <h1>Cold Email Project</h1>
+    <form th:action="@{/sendEmail}" th:object="${emaildata}" id="emailForm" method="post">
+      <input type="email" id="receiver" th:field="*{receiver}" placeholder="Receiver Email" required aria-label="Receiver Email"><br>
+
+      Email Type Options
+      <input class="type" type="button" value="Application" onclick="confirmAndSubmit('Application')" aria-label="Send Application Email">
+      <input class="type" type="button" value="Inquiry" onclick="confirmAndSubmit('Inquiry')" aria-label="Send Inquiry Email">
+
+      Dropdown for Job Positions
+      <div class="dropdown">
+        <button class="btn" aria-haspopup="true" aria-expanded="false">
+          Select Job Position
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <input type="button" value="Back End Developer" onclick="confirmAndSubmit('Back End Developer')" aria-label="Back End Developer">
+          <input type="button" value="Full Stack Developer" onclick="confirmAndSubmit('Full Stack Developer')" aria-label="Full Stack Developer">
+          <input type="button" value="Full Stack Java Developer" onclick="confirmAndSubmit('Full Stack Java Developer')" aria-label="Full Stack Java Developer">
+          <input type="text" id="customPosition" placeholder="Custom Position" aria-label="Custom Position">
+          <input type="button" value="Submit Custom" onclick="confirmCustomEmailType()" aria-label="Submit Custom Position">
+        </div>
+      </div>
+      
+      Hidden input to hold selected email type
+      <input type="hidden" id="emailTypeField" name="emailType" th:field="*{emailType}">
+      
+       </form>
+  </div>
+
+  <script>
+    // Confirm email submission before setting the email type
+    function confirmAndSubmit(type) {
+      const receiver = document.getElementById("receiver").value;
+      if (!receiver) {
+        alert("Please enter the receiver's email.");
+        return;
+      }
+      if (confirm(`Are you sure you want to send an email to ${receiver}?`)) {
+        document.getElementById('emailTypeField').value = type;
+        document.getElementById('emailForm').submit();
+      }
+    }
+
+    // Confirm submission with a custom email type
+    function confirmCustomEmailType() {
+      const customType = document.getElementById('customPosition').value;
+      const receiver = document.getElementById("receiver").value;
+      if (!customType) {
+        alert('Please enter a custom position.');
+        return;
+      }
+      if (!receiver) {
+        alert("Please enter the receiver's email.");
+        return;
+      }
+      if (confirm(`Are you sure you want to send an email to ${receiver}?`)) {
+        document.getElementById('emailTypeField').value = customType;
+        document.getElementById('emailForm').submit();
+      }
+    }
+  </script>
+
+</body>
+</html>
+ -->

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>registration</title>
+</head>
+<body>
+
+<h1>User Registration Page</h1>
+
+<form th:action="@{/register}" th:object="${user}" method="post">
+
+<label>Enter Name</label>
+<input type="text" th:field="*{name}"/>
+<br><br>
+<label>Enter Email</label>
+<input type="email" th:field="*{email}"/>
+<br><br>
+<label>Gender</label>
+<input type="radio" name="gender" th:field="*{gender}" value="male"/> Male
+<input type="radio" name="gender" th:field="*{gender}" value="female"/> Female
+<br><br>
+
+
+<input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>

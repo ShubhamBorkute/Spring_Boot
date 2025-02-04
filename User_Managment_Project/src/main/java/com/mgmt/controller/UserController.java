@@ -73,10 +73,10 @@ public class UserController {
 		}
 		
 	//UserEntity id2 = userService.getUserById(user.getUser_id());
-		
-	Integer id = userService.saveUser(user);
+		Integer id = user.getUser_id();
+	userService.saveUser(user);
 	
-	if(id!=null) redirectAttributes.addFlashAttribute("msg", "User Updtated with id : "+id);
+	if(id!=null) redirectAttributes.addFlashAttribute("msg", "User Updated with id : "+id);
 	else redirectAttributes.addFlashAttribute("msg", "User Addded Succesfully");
 	System.out.println("User Save With Id "+id);
 		return "redirect:/users";

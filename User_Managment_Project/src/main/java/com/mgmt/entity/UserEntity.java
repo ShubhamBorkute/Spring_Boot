@@ -23,7 +23,7 @@ public class UserEntity {
 	private Integer user_id;
 
 	@NotBlank(message = "First Name is required")
-	@Size(min = 2, max = 25, message = "First Name Should be between 3 to 25 characters")
+	@Size(min = 3, max = 25, message = "First Name Should be between 3 to 25 characters")
 	private String firstName;
 
 	@NotBlank(message = "Last Name is required")
